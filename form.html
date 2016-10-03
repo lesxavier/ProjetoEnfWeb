@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Paciente</title>
+</head>
+<body>
+    <form action="php/cadastra_paciente.php" method="post">
+            <fieldset title="Identificação do Usuário">
+                <legend>IDENTIFICAÇÃO DO USUÁRIO</legend>
+                <fieldset>
+                    <legend>DADOS PESSOAIS</legend>
+                <label for="cpf">CPF (SEM PONTOS OU HÍFEN): </label>
+                <input type="text" name="cpf" id="cpf" maxlength="11">
+                <label for="nome">NOME: </label>
+                <input type="text" name="nome" id="nome" maxlength="40" required>
+                <label for="nome_social">NOME SOCIAL: </label>
+                <input type="text" id="nome_social" name="nome_social" maxlength="40">
+                <label for="nasc">DATA DE NASCIMENTO: </label>
+                <input type="date" required id="nasc" name="nasc">
+                <label for="nome_mae">NOME COMPLETO DA MÃE: </label>
+                <input type="text" maxlength="40" name="nome_mae" id="nome_mae" required>
+                </fieldset>
+                <fieldset title="SEXO">
+                    <legend>SEXO</legend>
+                    <input type="radio" name="sexo" id="sexom" value="M" checked>
+                    <label for="sexom">MASCULINO</label>
+                    <input type="radio" name="sexo" id="sexof" value="F">
+                    <label for="sexof">FEMININO</label>
+                </fieldset>
+                <fieldset>
+                    <legend>RAÇA</legend>
+                    <input type="radio" name="raca" id="branco" value="branca">
+                    <label for="branco">BRANCA</label>
+                    <input type="radio" name="raca" id="preta" value="preta">
+                    <label for="preta">PRETA</label>
+                    <input type="radio" name="raca" id="parda" value="parda">
+                    <label for="parda">PARDA</label>
+                    <input type="radio" name="raca" id="amarela" value="amarela">
+                    <label for="amarela">AMARELA</label>
+                    <input type="radio" name="raca" id="indigena" value="indigena">
+                    <label for="indigena">INDIGENA</label>
+                </fieldset>
+                <fieldset>
+                    <legend>NACIONALIDADE</legend>
+                    <input type="radio" name="nacionalidade" id="brasil" value="brasileiro">
+                    <label for="brasil">BRASILEIRO</label>
+                    <input type="radio" name="nacionalidade" id="estrang" value="estrangeiro">
+                    <label for="estrang">ESTRANGEIRO</label>
+                    <input type="radio" name="nacionalidade" id="natur" value="naturalizado">
+                    <label for="natur">NATURALIZADO</label><br>
+                    <label for="loc_nasc">LOCAL DE NASCIMENTO: </label>
+                    <input type="text" id="loc_nasc" name="loc_nasc" maxlength="100">
+                </fieldset>
+                <fieldset>
+                    <legend>RESPONSÁVEL FAMILIAR</legend>
+                    É O RESPONSÁVEL?
+                    <input type="radio" name="respons" id="rsim" value="1">
+                    <label for="rsim">SIM</label>
+                    <input type="radio" name="respons" id="rnao" value="0">
+                    <label for="rnao">NÃO</label>
+                    <label for="rcpf">CPF: </label>
+                    <input type="text" name="rcpf" id="rcpf" maxlength="11">
+                    <label for="rnasc">DATA DE NASCIMENTO</label>
+                    <input type="date" id="rnasc">
+                    <label for="relacoes">GRAU DE PARENTESCO: </label>
+                        <input list="relacoes" >
+                        <datalist id="relacoes">
+                            <option value="Cônjuge">
+                            <option value="Filho(a)">
+                            <option value="Enteado(a)">
+                            <option value="Neto(a)">
+                            <option value="Pai/Mãe">
+                            <option value="Sogro(a)">
+                            <option value="Irmão/Irmã">
+                            <option value="Genro/Nora">
+                            <option value="Outro">
+                            <option value="Não Parente">
+                        </datalist>
+                </fieldset>
+                <fieldset>
+                    <legend>DADOS DE CONTATO</legend>
+                    <label for="tel_res">TELEFONE RESIDENCIAL: </label>
+                    <input type="text" pattern=".([0-9]{2,}.)[0-9]{4,}-[0-9]{4,}lk" maxlength="14" id="tel_res" title="(DDD)1234-5678">
+                    <label for="cel">CELULAR: </label>
+                    <input type="text" pattern=".([0-9]{2,}.)[0-9]{4,}-[0-9]{4,}lk" maxlength="14" id="cel" title="(DDD)1234-5678">
+                    <label for="email">E-MAIL: </label>
+                    <input type="email" maxlength="30" id="email" name="email">
+                </fieldset>
+            </fieldset>
+        <fieldset>
+            <legend>INFORMAÇÕES SOCIODEMOGRÁFICAS: </legend>
+            <label for="ocupacao">OCUPAÇÃO: </label>
+            <input type="text" maxlength="20" id="ocupacao">
+            <p>FEQUENTA ESCOLA/CRECHE?
+            <input type="radio" name="escola" value="1" id="esim">
+            <label for="esim">SIM</label>
+            <input type="radio" name="escola" value="0" id="enao">
+            <label for="enao">NÃO</label></p>
+            <p><label for="escolaridade">ESCOLARIDADE: </label>
+            <input list="escolaridade">
+            <datalist id="escolaridade">
+                <option value="Creche"></option>
+                <option value="Pré-Escola"></option>
+                <option value="Classe Alfabetizada"></option>
+                <option value="Ensino Fudamental Incompleto"></option>
+                <option value="Ensino Fudamental Completo"></option>
+                <option value="Ensino Médio Incompleto"></option>
+                <option value="Ensino Médio Completo"></option>
+                <option value="Ensino Superior Incompleto"></option>
+                <option value="Ensino Superior Completo"></option>
+                <option value="Nenhum"></option>
+            </datalist></p>
+            <p><label for="trabalho">SITUAÇÃO NO MERCADO DE TRABALHO: </label>
+            <input list="trabalho" id="emprego">
+            <datalist id="trabalho">
+                <option value="Empregador"></option>
+                <option value="Assalariado"></option>
+                <option value="Autônomo"></option>
+                <option value="Aposentado/Pensionista"></option>
+                <option value="Desempregado"></option>
+                <option value="Não Trabalha"></option>
+                <option value="Outro"></option>
+            </datalist></p>
+            <P>POSSUI PLANO DE SAÚDE?
+            <input type="radio" id="psim" value="0" checked>
+            <label for="psim">SIM</label>
+            <input type="radio" id="pnao" value="1">
+            <label for="pnao">NÃO</label></p>
+
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
