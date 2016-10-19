@@ -18,8 +18,8 @@
 
     while ($paciente = mysqli_fetch_array($result)){
         echo '<tr>';
-        echo '<th><a href="nova_evolucao?cod='.$paciente['cod'].'">'.$paciente['cod'].'</a></th>';
-        echo '<th>'.$paciente['name'].'</th>';
+        echo '<th><a href="nova_evo.php?cod=' .$paciente['cod'].'">'.$paciente['cod'].'</a></th>';
+        echo '<th>'.$paciente['nome'].'</th>';
         echo '</tr>';
     }
 

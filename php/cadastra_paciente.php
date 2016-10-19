@@ -6,8 +6,7 @@
  * Time: 17:34
  */
 
-/**TODO
- * Verificar se paciente não existe (como? CPF)
+/**TODO: Verificar se paciente não existe (como? CPF)
  */
 
 include "connection.php";

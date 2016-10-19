@@ -7,8 +7,8 @@
     <?php
         include "connection.php";
 
-        $user = mysqli_real_escape_string($connection,$_POST['login']);
-        $psswd = mysqli_real_escape_string($connection,$_POST['password']);
+        $user = mysqli_real_escape_string($connection,$_POST['user']);
+        $psswd = mysqli_real_escape_string($connection,$_POST['pswd']);
 
         $query = "SELECT * FROM cadastros WHERE user ='$user' AND psswd = MD5('$psswd')";
         $result = mysqli_query($connection,$query) or print(mysql_error());
@@ -21,11 +21,13 @@
                 setcookie('name', $user['name']);
                 header("Location: home.php");
             }
-            else{
-                echo "<script>
-                        alert('Usuário e/ou Senha não conferem!');
-                        window.location='../../index.html';
-                      </script>";
+            else {
+                /**               echo "<script>
+                 * alert('Usuário e/ou Senha não conferem!');
+                 * window.location='../index.html';
+                 * </script>";
+                 * }*/
+
             }
         }
         else{
