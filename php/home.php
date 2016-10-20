@@ -11,6 +11,6 @@ $name = $_COOKIE['name'];
 echo "<h1>Bem-Vindo(a) $name!</h1></br>"
 ?>
 <a href="consulta_pacientes.php"><button >Nova Evolução</button></a>
-<a href="logout.php">Sair</a>
+<a href="logout.php"><button>Sair</button></a>
 </body>
 </html>
