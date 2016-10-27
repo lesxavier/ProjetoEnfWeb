@@ -31,8 +31,10 @@ est_temperatura,respiracao,rpm,pulso,bpm,pressao,paps,pele,cabelo)
 VALUES ('$pac','$data',".$_COOKIE['user'].",'$leito','$pos','$loc','$frsp','$oxg','$con','$fcon','$tmp','$etmp','$ersp','$rsp','$epls','$pls','$epss','$pss','$ple','$cab')";
 
 if(mysqli_query($connection,$query)){
-    echo "<script type='text/javascript'>
-                alert('Evolução Adicionada com Sucesso!')
+    echo "<meta charset='UTF-8'>
+           <script type='text/javascript'>
+                alert('Evolução Adicionada com Sucesso!');
+                location.href = 'home.php';
           </script>";
     header("Location: home.php");
 } else {

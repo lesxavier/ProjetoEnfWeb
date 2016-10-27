@@ -1,6 +1,6 @@
-<html lang="pt-br">
+<html>
+<meta charset="UTF-8">
 <head>
-    <meta charset="UTF-8">
     <title>Nightingale Project</title>
 </head>
 <body>

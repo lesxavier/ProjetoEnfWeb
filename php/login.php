@@ -1,4 +1,4 @@
-<html lang="pt">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Projeto Enfermagem</title>

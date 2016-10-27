@@ -1,6 +1,6 @@
-<html lang="pt-br">
+<html>
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+    <meta charset="UTF-8" >
     <title>Cadastro de Paciente</title>
 </head>
 <body>
