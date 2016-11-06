@@ -15,3 +15,7 @@ Eg.: Um update feito no dia 26-10-2016 (Qua) às 23:47 será o de versão v1.10.442
 ***  - O formato padrão será o de 24h (Eg. 23:58 = 23), e deverão ter dois dígitos (Eg. 08:45 = 08).
 
 OBS.: Caso se tenha mais de um 0 à direita, reduza a quantidade para apenas um.
+
+Para Atualizar o Site Através do GitHUB:
+
+http://tableless.com.br/usando-git-para-atualizar-arquivos-no-servidor-de-hospedagem/
