@@ -1,6 +1,6 @@
 <?php
 
-$servidor = "server18.hostinger.com.br";
+$servidor = "mysql.hostinger.com.br";
 $user = "u556840316_root";
 $senha = "nightingale";
 $banco = "u556840316_proje";
@@ -8,7 +8,7 @@ $banco = "u556840316_proje";
 $connection = mysqli_connect($servidor, $user, $senha);
 
 if(!$connection){
-    echo "Falha de Conexão";
+    echo "Falha de ConexÃ£o";
 }else{
     mysqli_set_charset('utf8');
     $db = mysqli_select_db($connection,$banco);
