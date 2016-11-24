@@ -36,7 +36,6 @@ if(mysqli_query($connection,$query)){
                 alert('Evolução Adicionada com Sucesso!');
                 location.href = 'home.php';
           </script>";
-    header("Location: home.php");
 } else {
     print(mysqli_error($connection));
 }
