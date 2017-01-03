@@ -1,9 +1,18 @@
+
 <html>
 <head>
     <meta charset="UTF-8" >
     <title>Cadastro de Paciente</title>
 </head>
 <body>
+<?php
+if(!$_COOKIE['user']){
+    echo "<script type='text/javascript'>
+            alert('Faça Login Para Fazer Acesso ao Sistema');
+          </script>";
+    location.href = "../index.html";
+}
+?>
     <form method="post" action="cadastra_evo.php?cod=<?php echo $_GET["cod"];?>">
         <fieldset title="Cabeçalho">
             <label for="number">Nº do Leito: </label>

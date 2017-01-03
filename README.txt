@@ -17,3 +17,13 @@ Eg.: Um update feito no dia 26-10-2016 (Qua) às 23:47 será o de versão v1.10.
 OBS.: Caso se tenha mais de um 0 à direita, reduza a quantidade para apenas um.
 
 <>
+
+Lucas Ferreira Cabral 10,0
+Thadeu Souza 9,70
+Pedro Henrique Fidelis 9,60
+Yuri Conrado 8,30
+Luiz Eduardo Xavier 7,10
+Ana Victoria Quedo 6,60
+Douglas Rocha Vieira 6,00
+Gustavo Dias Andrade 5,10
+William Laffarque Alarcon 1,70

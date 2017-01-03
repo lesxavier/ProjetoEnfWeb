@@ -1,9 +1,9 @@
 <?php
 
-$servidor = "mysql.hostinger.com.br";
-$user = "u556840316_root";
-$senha = "nightingale";
-$banco = "u556840316_proje";
+$servidor = "localhost";
+$user = "root";
+$senha = "";
+$banco = "projenfbd";
 
 echo $servidor.$user.$senha.$banco;
 
