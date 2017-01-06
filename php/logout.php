@@ -7,9 +7,8 @@
 
     setcookie('user','',time()-3600);
     setcookie('name','',time()-3600);
-    echo
-    "<script>
-        alert('Você se deslogou com sucesso!');
-        location.href='../index.html';
-    </script>";
+
+    session_start('erros');
+    $_SESSION['logout'] = 1;
+    header("Location: ../index.php");
 ?>
