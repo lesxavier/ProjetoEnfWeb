@@ -109,8 +109,11 @@ li {
     outline: solid whitesmoke 1px;
 }
 
-
 .form-group{
     outline: solid black 1px;
     padding: 10px;
+}
+
+.mydiv{
+    cursor: pointer;
 }

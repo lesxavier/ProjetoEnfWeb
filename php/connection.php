@@ -5,7 +5,6 @@ $user = "root";
 $senha = "";
 $banco = "projenfbd";
 
-echo $servidor.$user.$senha.$banco;
 
 $connection = mysqli_connect($servidor, $user, $senha);
 
