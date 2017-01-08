@@ -47,6 +47,20 @@ Adicionar aqui um relatório do que foi feito:
         -Objetivo: Adicionar sistema de níveis de acesso, e criar (começar) a área de administração. Caso haja tempo, implementar o sistema para contato com os administradores;
 
 
+08/01/2017:
+
+[Luiz]
+
+    O dia foi completamente improdutivo. Tive pelo menos dois problemas com meu computador. Primeiramente fiquei sem a tela, mas contornei com o uso da minha TV, e em segundo meu cabo de carga queimou.
+    Depois de conseguir um novo carregador, algo de estranho aconteceu e simplesmente o CSS se desconfigurou. Para tentar reveter voltei para a versão anterior (perdendo tudo que fiz no dia), o que não adiantou.
+    Infelizmente não pude fazer nada além de refazer todos os códigos do sistema (estou trabalhando nisso no momento).
+
+    METAS ATUAIS
+
+    I:
+        -PRAZO: 09/01/2017
+        -OBJETIVO: REFAZER TODA A PARTE DO LAYOUT DO SISTEMA;
+
 !!!! ANTENÇÃO: MANTER ESTA PARTE SEMPRE NO FINAL DO ARQUIVO !!!!
 
     TODO: Ser capaz de gerar relatórios;

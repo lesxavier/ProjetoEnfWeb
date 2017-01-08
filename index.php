@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
 		<meta charset="utf-8"/>
@@ -13,10 +13,6 @@
 		<script src="dist/sweetalert.min.js"></script>
 		<link rel="stylesheet" href="dist/sweetalert.css" type="text/css">
 		<script src="dist/sweetalert-dev.js"></script>
-		<script>
-			swal("oi");
-
-		</script>
 		<?php
 			session_start('erros');
 			if(isset($_SESSION['erros']['erro1']) && $_SESSION['erros']['erro1'] == 1){
