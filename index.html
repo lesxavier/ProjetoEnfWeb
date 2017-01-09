@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto Nightingale</title>
+    <link rel="icon shortcut" href="img/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src="dist/sweetalert.js"></script>
+    <link rel="stylesheet" href="dist/sweetalert.css"></link-rel>
+    <!--Login()-->
+    <script type="application/javascript">
+        function login() {
+            var botao = $('#send');
+            var user = $('#user').val();
+            var pswd = $('#pswd').val();
+            $.ajax({
+                url: 'php/login.php',
+                type: 'POST',
+                data: "user="+user+"&pswd="+pswd,
+                success: function (result) {
+                    if (result == 1) {
+                        window.location.href = 'home.php';
+                    }
+                    else if (result == 0) {
+                        setTimeout(function () {
+                            swal({
+                                title: 'Erro',
+                                text: 'Usuário e/ou senha incorreto(s). Tente novamente.',
+                                type: 'warning'
+                            });
+                        },2000);
+                    }
+                    else {
+                        alert(result);
+
+                    }
+                },
+                error: function(){
+                    alert('Algo de errado não está certo');
+                }
+            });
+        }
+    </script>
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/xtailo.css">
+</head>
+<body>
+        <!--CABEÇALHO-->
+        <div class="row head1">
+            <div class="col-md-1"></div>
+            <div class="col-md-6 logo"></div>
+            <div class="col-md-5">
+                <form method="post" class="form-login form-inline" action="javascript:login()">
+                    <input id="user" type="text" class="login-input form-control">
+                    <input id="pswd" type="password" class="login-input form-control">
+                    <input id="send" type="submit" class="btn-primary btn">
+
+                </form>
+            </div>
+        </div>
+        <div class="row head2">
+            <div class="col-md-12"></div>
+        </div>
+
+        <!--CORPO-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h3 class="titulo">Instruções de Uso do Sistema</h3>
+                    <br>
+                    <h4>Acesso ao Sistema</h4>
+                    <p>Para acessar o sistema, utilize seu CPF, ou Nº de Passaporte para estrangeiros, e a senha definida. Em seguida clique em "Enviar".</p>
+                    <br>
+                    <h4>Primeiro Acesso:</h4>
+                    <p>Para o primeiro acesso ao sistema, você deve fazer a solicitação a um administrador. Caso seja necessário, você pode soliciar acesso clicando <a href="contato.html">aqui</a>. </p>
+                    <br>
+                    <h4>Recuperar Senha</h4>
+                    <p>Caso tenha esquecido sua senha e/ou deseja modifica-la, basta clicar <a href="mudasenha.html">aqui</a>.</p>
+                    <br>
+                    <h4>Mudança de E-mail</h4>
+                    <p>Caso seu e-mail cadastrado esteja incorreto, ou você não tenha mais acesso ao este e-mail, você deve entrar em contato com um administrador. Você pode fazer isso clicando <a href="contato.html">aqui</a>.</p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <!--RODAPÉ-->
+        <div class="row modal-footer">
+                Projeto Nightingale, desenvolvido por alunos da UFRJ.
+        </div>
+</body>
+</html>

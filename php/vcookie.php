@@ -1,9 +1,14 @@
 <?php
-if(!isset($_COOKIE['user'])) {
+if(!isset($_SESSION)) {
+    echo "<script>alert('Deu ruim')</script>";
     echo "<script type='text/javascript'>
-            alert('Faça Login Para Fazer Acesso ao Sistema');
-          </script>";
-    echo "<script>
-            location.href = '../index.php'
+            setTimeout(function(){
+                swal({
+                    title: 'Acesso Negado',
+                    text: 'Faça login para continuar.',
+                    type: 'error'
+                });
+            },2000);
+            location.href='../index.html';
           </script>";
 }

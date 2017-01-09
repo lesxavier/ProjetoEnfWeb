@@ -35,7 +35,7 @@ include "vcookie.php";
         <div class="span10 navbar">
             <ul class="nav">
                 <li><button class="btn2 btn-custom sharp" ONCLICK="window.location.href = 'home.php">Início</button></li>
-                <li><button class="btn2 btn-custom sharp" onclick="window.location.href = 'consulta_pacientes.php'">Pacientes</button></li>
+                <li><button class="btn2 btn-custom sharp" onclick="window.location.href = '../consulta_pacientes.php'">Pacientes</button></li>
                 <li><button class="btn2 btn-custom sharp active disabled" onclick="window.location.href = 'nova_evo.php'">Nova Evolução</button></li>
                 <li><button class="btn2 btn-custom sharp" onclick="window.location.href = '#'">Gerar Relatório</button></li>
             </ul>

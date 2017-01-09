@@ -1,0 +1,87 @@
+.head1{
+    background-color: #007edd;
+    color: whitesmoke;
+    height: 100px;
+}
+
+.head1 a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.head1 a:hover{
+    text-decoration: underline;
+}
+
+.logo {
+    background-image: url("../img/logo_hucff.jpg");
+    height: 100px;
+    background-repeat: no-repeat;
+}
+
+.form-login {
+    margin-top: 30px;
+}
+
+
+.btn-primary {
+    background-color: #0158a4;
+    border-radius: 5px;
+}
+
+.head2 {
+    background-color: #066dcc;
+    height: 30px;
+}
+
+.titulo {
+    color: #006dcc;
+    font-weight: bolder;
+}
+
+.modal-footer{
+    text-align: center;
+    font-size: smaller;
+    background-color: #006dcc;
+    color: whitesmoke;
+    height: 33px;
+    padding-top: 5px;
+    margin-bottom: -10px;
+}
+
+.name {
+    font-weight: bold;
+    text-align: center;
+}
+
+.nav-custom li{
+
+    display: inline;
+    outline: none;
+}
+
+.btn-info{
+    height: 30px;
+    border-radius: 0px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    background-color: #006dcc;
+}
+
+.btn-info:hover{
+    background-color: #338fee;
+    transition-duration: 0.45s;
+}
+
+.selected{
+    background-color: white;
+    color:#006dcc;
+    font-weight: bolder;
+}
+
+.selected:hover{
+    background-color: white;
+    color:#006dcc;
+}
