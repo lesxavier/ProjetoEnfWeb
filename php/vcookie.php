@@ -1,6 +1,5 @@
 <?php
-if(!isset($_SESSION)) {
-    echo "<script>alert('Deu ruim')</script>";
+if(!isset($_SESSION['name'])) {
     echo "<script type='text/javascript'>
             setTimeout(function(){
                 swal({
@@ -9,6 +8,6 @@ if(!isset($_SESSION)) {
                     type: 'error'
                 });
             },2000);
-            location.href='../index.html';
+            location.href='index.html';
           </script>";
 }

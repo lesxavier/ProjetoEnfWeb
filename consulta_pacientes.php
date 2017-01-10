@@ -40,7 +40,7 @@ header("Content-Type: text/html;  charset=ISO-8859-1",true) ?>
         <ul class="nav-custom">
             <li><button class="btn btn-info" onclick="location.href='home.php'">Início</button></li>
             <li><button class="btn btn-info selected">Pacientes</button></li>
-            <li><button class="btn btn-info">Nova Evolução</button></li>
+            <li><button class="btn btn-info" onclick="location.href ='nova_evo.php'">Nova Evolução</button></li>
             <li><button class="btn btn-info">Gerar Relatório</button> </li>
             <li><button class="btn btn-info">Administração</button> </li>
         </ul>
@@ -56,7 +56,7 @@ header("Content-Type: text/html;  charset=ISO-8859-1",true) ?>
             <table class="table table-bordered table-responsive mytable">
                 <tr>
                     <th style="text-align: center">
-                        <input type="text" name="nome" class="form-control" onkeyup="pesquisa(this.value)" autocomplete="off" class="form-control">
+                        <input type="text" name="nome" onkeyup="pesquisa(this.value)" autocomplete="off" class="form-control search-input" placeholder="Buscar Paciente">
                         </button>
                     </th>
                 </tr>

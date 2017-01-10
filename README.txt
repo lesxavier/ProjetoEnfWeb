@@ -61,16 +61,31 @@ Adicionar aqui um relatório do que foi feito:
         -PRAZO: 09/01/2017
         -OBJETIVO: REFAZER TODA A PARTE DO LAYOUT DO SISTEMA;
 
+09/01/2017
+
+[Luiz]
+
+    Consegui refazer toda a parte de Layout, e inclusive fiz algumas melhoras significativas.
+    Dentre as melhorias posso citar que iplementei um novo algoritmo e código para realizar login do usuário. Sem falar que aumentei consideravelmente a integração do sistema com JavaScript, JQuery e AJAX, reduzindo um tanto do PHP usado, e tornando a página mais interativa.
+    Agora para finalizar de fato o layout, falta conseguir deixar as coisas em tamanho fixo, pois assim as coisas ficam no lugar em tela menores (uma preocupação, uma vez que estou usando monitor Full HD).
+    Fica a ideia no ar de fazer uma versão exclusivamente mobile do site, assim acho que teremos uma interação bem melhor.
+   Sendo assim, posso retomar as minhas metas, para as anteriores aos problemas que tive. Além disso estou sendo capaz finalmente de definir uma data final para a conclusão. que deve ficar em torno de três semanas.
+
+    META ATUAL:
+
+        -PRAZO: 10/01/2017
+        -OBJETIVO: VERIFICAR SISTEMA DE CADASTRO DE PACIENTES E NOVAS EVOLUÇÕES, E TESTA-LOS. ALÉM DISSO, AJEITAR O LAYOUT DA PÁGINA DE CADASTRO DE PACIENTE.
+
+
 !!!! ANTENÇÃO: MANTER ESTA PARTE SEMPRE NO FINAL DO ARQUIVO !!!!
 
     TODO: Ser capaz de gerar relatórios;
     TODO: EXIBIR CADASTRO DO USUÁRIO;
     TODO: ÁREA ADMINISTRAÇÃO;
     TODO: ENVIO DE E-MAIL PARA CONTATO;
-    TODO: AJEITAR LAYOUT DO CADASTRO DE EVOLUÇÃO;
-    TODO: MOSTRAR CADASTRO DE PACIENTES;
     TODO: DETERMINAR LAYOUT DA PÁGINA INICIAL;
     TODO: NÍVEIS DE ACESSO;
     TODO: HISTÓRICO DO PACIENTE;
 
+META FINAL: 31/01/2017
 

@@ -32,7 +32,7 @@ header("Content-Type: text/html;  charset=ISO-8859-1",true);?>
         <ul class="nav-custom">
             <li><button class="btn btn-info selected">Início</button></li>
             <li><button class="btn btn-info" onclick="location.href='consulta_pacientes.php'">Pacientes</button></li>
-            <li><button class="btn btn-info">Nova Evolução</button></li>
+            <li><button class="btn btn-info" onclick="location.href='nova_evo.php'">Nova Evolução</button></li>
             <li><button class="btn btn-info">Gerar Relatório</button> </li>
             <li><button class="btn btn-info">Administração</button> </li>
         </ul>

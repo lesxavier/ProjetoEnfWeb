@@ -6,5 +6,5 @@
     mysqli_query($connection,$query);
 
     session_unset();
-    header("Location: ../index.php");
+    header("Location: ../index.html");
 ?>
