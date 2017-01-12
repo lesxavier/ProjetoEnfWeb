@@ -14,8 +14,6 @@
             $_SESSION['name'] = $user['name'];
             $_SESSION['nvl'] = $user['nvl'];
             $_SESSION['cod'] = $user['user'];
-            $_SESSION['teste'] = 'testando...';
-            setcookie("teste",'testando');
             $last = new DateTime($user['last_login']);
             $_SESSION['last_login'] = $last->format('d/m/Y H:i');
             $query = "UPDATE cadastros SET last_login= NOW() WHERE user =".$user['user'];

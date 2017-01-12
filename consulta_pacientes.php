@@ -100,7 +100,7 @@ header("Content-Type: text/html;  charset=ISO-8859-1",true) ?>
                 mysqli_free_result($result);
                 mysqli_close($connection);
                 ?>
-                <tr role="button" onclick="window.location.href = 'html/form.html'"><th colspan="2" style="text-align: center">Incluir Novo</th></tr>
+                <tr role="button" onclick="window.location.href = 'novo_paciente.php'"><th colspan="2" style="text-align: center">Incluir Novo</th></tr>
             </table>
         </div>
         <div class="col-md-2"></div>

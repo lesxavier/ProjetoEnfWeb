@@ -24,6 +24,58 @@
             }
         }
     </script>
+    <script>
+        function procura_paciente() {
+            var myForm = document.getElementById('form');
+            var data = new FormData(myForm);
+            $.ajax({
+                url: 'php/cadastra_evo.php',
+                type: 'POST',
+                data: data,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function (result) {
+                    alert('Oi');
+                    if (result == 1) {
+                        setTimeout(function(){
+                            swal({
+                                title: 'Enviado',
+                                text: 'Evolução cadastrada com sucesso!',
+                                type: 'success'
+                            });
+                        },2000);
+                        $('#form').trigger('reset');
+                    }
+                    else if (result == 0) {
+                        setTimeout(function () {
+                            swal({
+                                title: 'Erro',
+                                text: 'Estamos tendo problemas no servidor, tente novamente mais tarde.',
+                                type: 'error'
+                            });
+                        },2000);
+                    }
+                    else if(result==2) {
+                        setTimeout(function () {
+                            swal({
+                                title: 'Paciente Não Encontrado',
+                                text: 'O código de paciente fornecido não está cadastrado no sistema. Verifique o código, ou até mesmo o cadaastro do paciente na aba Pacientes',
+                                type: 'warning'
+                            });
+                        },2000);
+
+                    }
+                    else {
+                        alert(result);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    alert(xhr.responseText);
+                }
+            });
+        }
+    </script>
     <script src="js/bootstrap.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/xtailo.css">
@@ -58,7 +110,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <table class="table bordeless">
-            <form method="post" class="form-group" action="php/cadastra_evo.php?">
+            <form method="post" id="form" class="form-group" action="javascript:procura_paciente()">
             <div title="Cabeçalho" class="form-group">
                 <tr>
                     <th colspan="2" class="titulo">
@@ -67,10 +119,10 @@
                 </tr>
                 <tr>
                     <th>
-                        <input class="form-control" placeholder="Código do Paciente" type="text" id="cod_pac">
+                        <input class="form-control" placeholder="Código do Paciente" type="text" id="pac" name="pac" required>
                     </th>
                     <th>
-                        <input class="form-control" id="leito"  name="num" type="number" placeholder="Nº do Leito">
+                        <input class="form-control" id="leito"  name="num" type="number" placeholder="Nº do Leito" min="1" required>
                     </th>
                 </tr>
             </div>
@@ -81,12 +133,12 @@
                 </tr>
                 <tr>
                     <th colspan="2">
-                        <textarea placeholder="Observações Gerais" id="obs" name="obs" cols="100" rows="10"></textarea>
+                        <textarea placeholder="Observações Gerais" id="obs" name="obs" cols="100" rows="10" maxlength="65535"></textarea>
                     </th>
                 </tr>
                 <tr>
                     <th>
-                        <input placeholder="Posição" list="posicoes" id="pos" class="form-control" name="pos">
+                        <input placeholder="Posição" list="posicoes" id="pos" class="form-control" name="pos" required>
                         <datalist id="posicoes">
                             <option value="Dec Dorsal">
                             <option value="Fowler">
@@ -97,7 +149,7 @@
                         </datalist>
                     </th>
                     <th>
-                        <input placeholder="Locomoção" class="form-control" id="loc" name="loc" list="locomocao">
+                        <input placeholder="Locomoção" class="form-control" id="loc" name="loc" list="locomocao" required>
                         <datalist id="locomocao">
                             <option value="Deaambulando">
                             <option value="Rest ao Leito">
@@ -107,7 +159,7 @@
                 </tr>
                 <tr>
                     <th>
-                        <input placeholder="Nivel de Consciência" class="form-control" id="con" name="con" list="consc">
+                        <input placeholder="Nivel de Consciência" class="form-control" id="con" name="con" list="consc" required>
                         <datalist id="consc">
                             <option value="Orientado" selected>
                             <option value="Consciente">
@@ -116,7 +168,7 @@
                         </datalist>
                     </th>
                     <th>
-                        <input placeholder="Forma de Consciência" class="form-control" name="fcon" id="fcon" list="fconsc">
+                        <input placeholder="Forma de Consciência" class="form-control" name="fcon" id="fcon" list="fconsc" required>
                         <datalist id="fconsc">
                             <option value="Verbalizando" selected>
                             <option value="Amigável">
@@ -132,10 +184,10 @@
                 </tr>
                 <tr>
                     <th>
-                        <input placeholder="Temperatura" name="tmp" id="tmp" type="number" max="100" min="0" class="form-control">ºC
+                        <input placeholder="Temperatura" name="tmp" id="tmp" type="number" max="100" min="0" any class="form-control" required>ºC
                     </th>
                     <th>
-                        <input placeholder="Estado de Temperatura" list="est_temps" id="etmp" name="etmp" class="form-control">
+                        <input placeholder="Estado de Temperatura" list="est_temps" id="etmp" name="etmp" class="form-control" required>
                         <datalist id="est_temps">
                             <option value="Normotermia" selected>
                             <option value="Afebril">
@@ -148,7 +200,7 @@
                 </tr>
                 <tr>
                     <th>
-                    <input placeholder="Estado de Respiração" class="form-control" id="ersp" name="ersp" list="respiracao">
+                    <input placeholder="Estado de Respiração" class="form-control" id="ersp" name="ersp" list="respiracao" required>
                     <datalist id="respiracao">
                         <option value="Eupneia">
                         <option value="Taquipneia">
@@ -160,23 +212,23 @@
                     </datalist>
                     </th>
                     <th>
-                        <input placeholder="Velocidade" id='rsp' type="number" class="form-control" name="rsp">rpm
+                        <input placeholder="Velocidade" id='rsp' type="number" class="form-control" name="rsp" required>rpm
                     </th>
                 </tr>
                 <tr>
                     <th>
-                        <input class="form-control form-radio" type="radio" id="frsp" name="frsp" value="ambiente" onclick="javascript:mudaVisibilidade()"> Respirando ar ambiente
+                        <input class="form-control form-radio" type="radio" id="frsp" name="frsp" value="ambiente" onclick="javascript:mudaVisibilidade()" checked> Respirando ar ambiente
                     </th>
                     <th>
-                        <input class="form-control form-radio" type="radio" id="oxS" name="frsp" value="oxigenação" onclick="javascript:mudaVisibilidade()"> Em oxigenação<br/><div id="ox" style="visibility: hidden"> <input placeholder="Oxigenação" name="oxg" id="oxg" class="form-control" type="number" min="0" max="100"> &percnt;</div>
+                        <input class="form-control form-radio" type="radio" id="oxS" name="frsp" value="oxigenação" onclick="javascript:mudaVisibilidade()"> Em oxigenação<br/><div id="ox" style="visibility: hidden"> <input placeholder="Oxigenação" name="oxg" id="oxg" class="form-control" type="number" min="0" max="100" value="0"> &percnt;</div>
                     </th>
                 </tr>
                 <tr>
                     <th>
-                        <input placeholder="Pulsação" name="pls" class="form-control" id="pls" type="number">bpm
+                        <input placeholder="Pulsação" name="pls" class="form-control" id="pls" type="number" required>bpm
                     </th>
                     <th>
-                        <input placeholder="Estado de Pulso" id="epls" name="epls" list="est_pulso" class="form-control">
+                        <input placeholder="Estado de Pulso" id="epls" name="epls" list="est_pulso" class="form-control" required>
                         <datalist id="est_pulso">
                             <option value="Normocárdico" selected />
                             <option value="Rítmico"/>
@@ -192,10 +244,10 @@
                 </tr>
                 <tr>
                     <th>
-                    <input placeholder="PA" id="pss1" class="form-control" name="pss1" type="number" style="width: 140px">/<input placeholder="PS" name="pss2" id="pss2" type="number" class="form-control" style="width: 140px">mmHg
+                    <input placeholder="PA" id="pss1" class="form-control" name="pss1" type="number" style="width: 140px">/<input placeholder="PS" name="pss2" id="pss2" type="number" class="form-control" style="width: 140px" required>mmHg
                     </th>
                     <th colspan="2">
-                        <input placeholder="Estado da Pressão" list="est_pressao" class="form-control" id="epss" name="epss">
+                        <input placeholder="Estado da Pressão" list="est_pressao" class="form-control" id="epss" name="epss" required>
                         <datalist id="est_pressao">
                             <option value="Normotensa" selected/>
                             <option value="Hipertensão"/>
@@ -207,7 +259,7 @@
                 </tr>
                 <tr>
                     <th>
-                        <input placeholder="Estado da Pele" class="form-control" list="pele" id="ple" name="ple">
+                        <input placeholder="Estado da Pele" class="form-control" list="pele" id="ple" name="ple" required>
                         <datalist id="pele">
                             <option value="Normocoradas" selected/>
                             <option value="Hipercoradas"/>
@@ -217,7 +269,7 @@
                         </datalist>
                     </th>
                     <th>
-                        <input placeholder="Estado do Cabelo" list="cabelo" name="cab" class="form-control">
+                        <input placeholder="Estado do Cabelo" list="cabelo" name="cab" class="form-control" required>
                         <datalist id="cabelo">
                             <option value="Íntegro" selected/>
                             <option value="Inflamações"/>
