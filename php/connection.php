@@ -1,9 +1,9 @@
 <?php
 
-$servidor = "localhost";
-$user = "root";
-$senha = "";
-$banco = "projenfbd";
+$servidor = "mysql.hostinger.com.br";
+$user = "u995390527_root";
+$senha = "nightr00t";
+$banco = "u995390527_night";
 
 
 $connection = mysqli_connect($servidor, $user, $senha);
